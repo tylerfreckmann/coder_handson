@@ -1,4 +1,5 @@
 from random import random
+from math import ceil
 
 # Define function to bin column values.
 def bin_values(revenue, v):
@@ -12,6 +13,6 @@ def bin_values(revenue, v):
 
 def mock_drift(v, drift_threshold):
     if random() < drift_threshold:
-        return v * 1.25
+        return ceil(v * 1.25)
     else:
         return v
